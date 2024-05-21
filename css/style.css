@@ -1,0 +1,357 @@
+@font-face 
+{
+    font-family: Poppins;
+    src: url(/fonts/Poppins-Regular.ttf);
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fff;
+}
+html
+{
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar
+{
+    width: 5px;
+}
+::-webkit-scrollbar-track
+{
+    background: #5151510e;
+}
+::-webkit-scrollbar-thumb
+{
+    background-color: #03a803;
+    border-radius: 20px;
+}
+body
+{
+    background-image:linear-gradient(#00000077 20%, #000000de 80%), url(../Assets/Images/green.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.horinav
+{
+    display: flex;
+    padding: 10px 15px;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100dvw - 30px);
+}
+.horinav .logo
+{
+    width: 15%;
+}
+.horinav .logo img
+{
+    height: 45px;
+}
+.horinav ul
+{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+.nav
+{
+    width: 55%;
+}
+.horinav a
+{
+    text-decoration: none;
+    font-weight: 590;
+    letter-spacing: 1px;
+}
+.horinav a:hover
+{
+    color: #0f0;
+}
+
+
+.home
+{
+    display: flex;
+    height: calc(100dvh - 75px);
+    align-items: center;
+}
+.trailer
+{
+    padding: 15px;
+    height: 50dvh;
+    width: 50dvw;
+    justify-content: center;
+}
+.trailertitle
+{
+    letter-spacing: 3px;
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+.trailervid
+{
+    height: 35dvh;
+    border-radius: 10px;
+    /* opacity: .6; */
+}
+.buttons
+{
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+}
+.buttons button, .picks button
+{
+    width: 20%;
+    background-color: #03a803;
+    border: 1px solid #ffffff1e;
+    outline: 0;
+    height: 30px;
+    font-weight: 800;
+    color: #ffefd5;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.buttons button:hover, .picks button:hover
+{
+    letter-spacing: 1px;
+    border: 1px solid #0f0;
+}
+
+.toppicks
+{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 70dvh;
+    overflow-y: scroll;
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    position: relative;
+    padding-top: 50px;
+}
+.picktitle
+{
+    position: fixed;
+    top: 0;
+}
+.picks
+{
+    display: flex;
+    align-items: center;
+    width: 45dvw;
+    justify-content: space-between;
+}
+.pickdescription
+{
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    width: 60%;                     
+}
+.images
+{
+    width: 150px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.moviename
+{
+    font-weight: 800;
+    font-size: 1em;
+}
+.overview
+{
+    font-size: .75em;
+}
+.movies
+{
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(#000000e3 10%, #000000 90%), url(/Assets/Images/tyson-moultrie-BQTHOGNHo08-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100dvh;
+    width: calc(100dvw - 5px);
+    align-items: center;
+    overflow: hidden;
+    padding: 5px 15px;
+    gap: 15px;
+}
+.moviestrailer
+{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+}
+.trailers
+{
+    width: 50%;
+}
+.moviesdescription
+{
+    width: 35%;
+    text-align: center;
+    font-size: .8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.buttons
+{
+    display: flex;
+    padding: 5px;
+    margin: 3px;
+    width: 100%;
+    justify-content: space-around;
+}
+.watch, .download
+{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #03a8031e;
+    background-color: #03a803ab;
+    box-shadow: 0 0 30px#03a80300;
+    backdrop-filter: blur(10px);
+    font-size: .8rem;
+}
+.watch:hover, .download:hover
+{
+    box-shadow: 0 0 80px #03a803c4;
+    background-color: #03a803c4;
+    border-radius: 10px;
+}
+.trailers video
+{
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+}
+.wrapper
+{
+    min-height: 30%;
+    max-height: 35%;
+    width: 100%;
+    /* overflow: hidden; */
+    position: relative;
+    overflow-x: hidden;
+}
+.slider
+{
+    display: flex;
+    gap: 10px;
+    height: 100%;
+    width: 100%;
+    transform: translateX(0);
+    transition: .6s all ease-in-out;
+}
+.wrappermovie
+{
+    min-width: 200px;
+    max-width: 250px;
+    overflow: hidden;
+    border-radius: 5px;
+    object-fit: cover;
+    position: relative;
+    object-fit: cover;
+    /* transform: translateX(-900px); */
+}
+.wrapimages
+{
+    height: 100%;
+    width: 100%;
+}
+.description
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 1;
+    background-image:linear-gradient(#00000000 5%, #00000000 95%);
+    transition: .8s;
+}
+.wrappermovie:hover .description
+{
+    background-image:linear-gradient(#000000e7 5%, #000000 95%);
+}
+.wrappermovie:hover .description h4
+{
+    bottom: 40%;
+}
+.wrappermovie:hover .description p
+{
+    bottom: 0;
+}
+.wrappermovie:hover .trailerbtn
+{
+    opacity: .9;
+}
+.trailerbtn
+{
+    position: absolute;
+    font-size: .6em;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #03a803;
+    margin: 1%;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    border: 1px solid #03a8031e;
+    opacity: 0;
+    transition: .9s all ease-in-out;
+}
+.trailerbtn:hover
+{
+    box-shadow: 0 0 30px #03a803c4;
+}
+.description p, .description h4
+{
+    position: inherit;
+    font-size: .65rem;
+    padding: 10px;
+    bottom: -400%;
+    transition: .8s;
+}
+.description h4
+{
+    font-size: .9rem;
+    bottom: 400%;
+}
+.description video
+{
+    display: none;
+}
+.wrapper svg
+{
+    width: 35px;
+    position: absolute;
+    z-index: 2;
+    bottom: 40%;
+    transform: translateX(-50%);
+    fill: #f3f3f30a;
+    transition: none;
+}
+.wrapper svg:hover
+{
+    fill: #f3f3f3d3;
+}
+.left
+{
+    left: 2%;
+    display: none;
+}
+.right
+{
+    left: 98%;
+}
